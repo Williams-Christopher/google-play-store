@@ -8,10 +8,6 @@ app = express();
 app.use(morgan('common'));
 app.use(cors());
 
-app.listen(8000, () => {
-    console.log('Now listening on port 8000 => http://localhost:8000/');
-});
-
 app.get('/apps', (req, res) => {
     let { sort, genre } = req.query;
     console.log(req.query);
@@ -46,3 +42,5 @@ app.get('/apps', (req, res) => {
 
     res.send(results);
 });
+
+module.exports = app;

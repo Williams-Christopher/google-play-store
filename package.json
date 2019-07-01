@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app",
-    "start": "node app",
-    "debug": "ndb app"
+    "test": "mocha --exit",
+    "dev": "nodemon server",
+    "start": "node server",
+    "debug": "ndb nodemon server"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +18,9 @@
     "morgan": "^1.9.1"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
   }
 }
